@@ -65,6 +65,25 @@ public class Main {
         }
         }
 
+        //    verifica input e esegue il metodo
+        int input;
+        System.out.println("Digita un numero da 1 a 5 per eseguire un elemento (0) per uscire");
+        do{
+            input = Integer.parseInt(scanner.nextLine());
+            if(input > 0 && input < 6){
+                if(elementoMultimediale[input - 1] instanceof Immagine){
+                    ((Immagine) elementoMultimediale[input - 1 ]).show();
+                }else if (elementoMultimediale[input - 1 ] instanceof RegistrazioneAudio){
+                    ((RegistrazioneAudio) elementoMultimediale[input - 1 ]).play();
+                } else {
+                    ((Video) elementoMultimediale[input - 1 ]).play();
+                }
+            }  if(input != 0 ){
+                System.out.println("Digita un numero da 1 a 5 per eseguire un elemento (0) per uscire");
+            }
+
+
+        } while (input != 0);
 
 
     }
