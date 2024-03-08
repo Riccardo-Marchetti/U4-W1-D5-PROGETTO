@@ -5,13 +5,13 @@ import Interfaces.Play;
 public class Video extends ElementoMultimediale implements Play {
     private int durata;
     private int volume;
-    private int luminosità;
+    private int luminosita;
 
-    public Video(String titolo, int durata, int volume, int luminosità) {
+    public Video(String titolo, int durata, int volume, int luminosita) {
         super(titolo);
         this.durata = durata;
         this.volume = volume;
-        this.luminosità = luminosità;
+        this.luminosita = luminosita;
     }
 
     //    Metodo per abbassare il volume
@@ -25,20 +25,20 @@ public class Video extends ElementoMultimediale implements Play {
     }
 
     //    Metodo per alzare la luminosità
-    public void aumentaLuminosità(){
-        luminosità ++;
+    public void aumentaLuminosita(){
+        luminosita ++;
     }
 
     //    Metodo per diminuire la luminosità
     public void diminuisciLuminosità(){
-        luminosità --;
+        luminosita --;
     }
 
     //    Metodo per riprodurre
     @Override
     public void play() {
         for (int i = 0; i < durata; i++) {
-            System.out.println(getTitolo() + " !".repeat(volume) + " *".repeat(luminosità));
+            System.out.println(getTitolo() + " !".repeat(volume) + " *".repeat(luminosita));
         }
     }
 }

@@ -1,5 +1,6 @@
 package Entities;
 
+
 import Interfaces.Play;
 
 public abstract class ElementoMultimediale  {
@@ -11,4 +12,5 @@ public abstract class ElementoMultimediale  {
     public String getTitolo() {
         return titolo;
     }
+
 }

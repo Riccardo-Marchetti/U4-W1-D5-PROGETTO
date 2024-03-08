@@ -2,26 +2,26 @@ package Entities;
 
 public class Immagine extends ElementoMultimediale{
 
-    private int luminosità;
+    private int luminosita;
 
-    public Immagine(String titolo, int luminosità) {
+    public Immagine(String titolo, int luminosita) {
         super(titolo);
-        this.luminosità = luminosità;
+        this.luminosita = luminosita;
     }
 
     //    Metodo per alzare la luminosità
-    public void aumentaLuminosità(){
-        luminosità ++;
+    public void aumentaLuminosita(){
+        luminosita ++;
     }
 
     //    Metodo per diminuire la luminosità
-    public void diminuisciLuminosità(){
-        luminosità --;
+    public void diminuisciLuminosita(){
+        luminosita --;
     }
 
     //    Metodo per riprodurre
     public void show(){
-        System.out.println(getTitolo() + "*".repeat(luminosità));
+        System.out.println(getTitolo() + " *".repeat(luminosita));
     }
 
 
