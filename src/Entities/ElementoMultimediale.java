@@ -2,7 +2,7 @@ package Entities;
 
 import Interfaces.Play;
 
-public abstract class ElementoMultimediale implements Play {
+public abstract class ElementoMultimediale  {
        private String titolo;
        public ElementoMultimediale(String titolo){
            this.titolo = titolo;
