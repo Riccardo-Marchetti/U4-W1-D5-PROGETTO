@@ -6,4 +6,12 @@ public class Immagine extends ElementoMultimediale{
         super(titolo);
         this.luminosità = luminosità;
     }
+    public void show(){
+
+    }
+
+    @Override
+    public void play() {
+
+    }
 }

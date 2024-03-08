@@ -10,4 +10,16 @@ public class RegistrazioneAudio extends ElementoMultimediale {
         this.durata = durata;
         this.volume = volume;
     }
+    public void abbassaVolume(){
+        volume --;
+    }
+    public void alzaVolume(){
+        volume++;
+    }
+
+
+    @Override
+    public void play() {
+
+    }
 }

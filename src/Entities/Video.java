@@ -11,4 +11,21 @@ public class Video extends ElementoMultimediale{
         this.volume = volume;
         this.luminosità = luminosità;
     }
+    public void abbassaVolume(){
+        volume --;
+    }
+    public void alzaVolume(){
+        volume++;
+    }
+    public void aumentaLuminosità(){
+        luminosità ++;
+    }
+    public void diminuisciLuminosità(){
+        luminosità --;
+    }
+
+    @Override
+    public void play() {
+
+    }
 }
