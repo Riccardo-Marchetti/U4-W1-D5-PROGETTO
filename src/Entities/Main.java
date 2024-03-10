@@ -73,12 +73,56 @@ public class Main {
             if(input > 0 && input < 6){
                 if(elementoMultimediale[input - 1] instanceof Immagine){
                     ((Immagine) elementoMultimediale[input - 1 ]).show();
-                }else if (elementoMultimediale[input - 1 ] instanceof RegistrazioneAudio){
+
+                    System.out.println("Digità + per alzare la luminosità o - per abbassarla");
+                    String controlloLuminosita = scanner.nextLine();
+                    if (controlloLuminosita.equals("+")) {
+                        ((Immagine) elementoMultimediale[input - 1 ]).aumentaLuminosita();
+                        System.out.println("luminosità alzata di 1");
+                    } else if (controlloLuminosita.equals("-")) {
+                        ((Immagine) elementoMultimediale[input - 1 ]).diminuisciLuminosita();
+                        System.out.println("luminosità abbassata di 1");
+                    }
+
+
+                } else if (elementoMultimediale[input - 1 ] instanceof RegistrazioneAudio){
                     ((RegistrazioneAudio) elementoMultimediale[input - 1 ]).play();
-                } else {
+
+                    System.out.println("Digità + per alzare il volume o - per abbassarlo");
+                    String controlloVolume = scanner.nextLine();
+                    if(controlloVolume.equals("+")){
+                        ((RegistrazioneAudio) elementoMultimediale[input - 1 ]).alzaVolume();
+                        System.out.println("volume alzato di 1");
+                    } else if (controlloVolume.equals("-")) {
+                        ((RegistrazioneAudio) elementoMultimediale[input - 1 ]).abbassaVolume();
+                        System.out.println("volume abbassato di 1");
+                    }
+
+                } else if (elementoMultimediale[input - 1 ] instanceof Video){
                     ((Video) elementoMultimediale[input - 1 ]).play();
+
+                    System.out.println("Digità + per alzare la luminosità o - per abbassarla");
+                    String controlloLuminosita = scanner.nextLine();
+                    if (controlloLuminosita.equals("+")) {
+                        ((Video) elementoMultimediale[input - 1 ]).aumentaLuminosita();
+                        System.out.println("luminosità alzata di 1");
+                    } else if (controlloLuminosita.equals("-")) {
+                        ((Video) elementoMultimediale[input - 1 ]).diminuisciLuminosità();
+                        System.out.println("luminosità abbassata di 1");
+                    }
+
+                    System.out.println("Digità + per alzare il volume o - per abbassarlo");
+                    String controlloVolume = scanner.nextLine();
+                    if(controlloVolume.equals("+")){
+                        ((Video) elementoMultimediale[input - 1 ]).alzaVolume();
+                        System.out.println("volume alzato di 1");
+
+                    } else if (controlloVolume.equals("-")) {
+                        ((Video) elementoMultimediale[input - 1 ]).abbassaVolume();
+                        System.out.println("volume abbassato di 1");
+                    }
                 }
-            }  if(input != 0 ){
+            } if(input != 0 ){
                 System.out.println("Digita un numero da 1 a 5 per eseguire un elemento (0) per uscire");
             }
 
