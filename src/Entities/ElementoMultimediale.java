@@ -9,8 +9,4 @@ public abstract class ElementoMultimediale  {
            this.titolo = titolo;
        }
 
-    public String getTitolo() {
-        return titolo;
-    }
-
 }
