@@ -21,7 +21,7 @@ public class Immagine extends ElementoMultimediale{
 
     //    Metodo per riprodurre
     public void show(){
-        System.out.println(getTitolo() + " *".repeat(luminosita));
+        System.out.println("Titolo: " + getTitolo() + " Luminosità: " + "* ".repeat(luminosita));
     }
 
 
