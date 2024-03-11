@@ -38,7 +38,7 @@ public class Video extends ElementoMultimediale implements Play {
     @Override
     public void play() {
         for (int i = 0; i < durata; i++) {
-            System.out.println("Titolo: " + getTitolo() + " Volume: " +   "! ".repeat(volume) + "Luminosita: " + " *".repeat(luminosita));
+            System.out.println("Titolo: " + titolo + " Volume: " +   "! ".repeat(volume) + "Luminosita: " + " *".repeat(luminosita));
         }
     }
 }
